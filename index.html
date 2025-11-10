@@ -2,40 +2,37 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Consultoria Gratuita | Terapeuta Lorena Jacob</title>
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Quicksand:wght@400;600&family=Poppins:wght@400;600&display=swap"
     rel="stylesheet"
   />
 
-  <!-- Ícones (atenção ao nome da pasta: 'Imagens') -->
+  <!-- Ícones -->
   <link rel="icon" href="Imagens/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="Imagens/apple-touch-icon.png" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- JS (defer para não travar o carregamento) -->
+  <!-- Calendly (necessário para pop-up funcionar) -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <!-- JS -->
   <script src="scripts.js" defer></script>
 </head>
 
 <body>
   <main class="main-wrapper">
 
-    <!-- HERO NOVO (limpo e sem sobreposição) -->
+    <!-- HERO -->
     <section class="hero" id="hero" aria-label="Consultoria gratuita com a Terapeuta Lorena Jacob">
       <div class="hero-content">
         <h1>
@@ -47,15 +44,13 @@
           emocionais, sensoriais e comportamentais.
         </p>
 
-        <a
-          href="https://w.app/lorenajacobterapeuta"
-          target="_blank"
-          rel="noopener"
+        <!-- Botão do Calendly -->
+        <a 
+          href="#" 
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/lorenajacobterapeuta/30min'});return false;" 
           class="btn-cta"
-          onclick="window.open(this.href,'_blank'); return false;"
-          aria-label="Abrir conversa no WhatsApp com a Terapeuta Lorena Jacob"
-        >
-          Saiba mais agora mesmo
+          aria-label="Agendar consulta gratuita com a Terapeuta Lorena Jacob">
+          Agendar consulta gratuita
         </a>
       </div>
     </section>
