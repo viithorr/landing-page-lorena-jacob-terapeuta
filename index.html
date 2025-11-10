@@ -2,54 +2,76 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>Consultoria Gratuita | Terapeuta Lorena Jacob</title>
 
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Quicksand:wght@400;600&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
 
+  <!-- Ícones (atenção ao nome da pasta: 'Imagens') -->
+  <link rel="icon" href="Imagens/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="Imagens/apple-touch-icon.png" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Fontes Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Quicksand:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-
-  <link rel="icon" href="imagens/favicon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" />
-
+  <!-- JS (defer para não travar o carregamento) -->
+  <script src="scripts.js" defer></script>
 </head>
-
 
 <body>
   <main class="main-wrapper">
-    <section class="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h1>
-            <span>Consultoria Gratuita</span>  com a Terapeuta Lorena Jacob
-          </h1>
-          <p>
-            Sessões online ou presenciais para compreender suas necessidades
-            emocionais, sensoriais e comportamentais. 
-          </p>
 
-          <a href="#formulario" class="btn-cta">Saiba mais agora mesmo</a>
-        </div>
+    <!-- HERO NOVO (limpo e sem sobreposição) -->
+    <section class="hero" id="hero" aria-label="Consultoria gratuita com a Terapeuta Lorena Jacob">
+      <div class="hero-content">
+        <h1>
+          <span>Consultoria Gratuita</span> com a Terapeuta Lorena Jacob
+        </h1>
+
+        <p>
+          Sessões online ou presenciais para compreender suas necessidades
+          emocionais, sensoriais e comportamentais.
+        </p>
+
+        <a
+          href="https://w.app/lorenajacobterapeuta"
+          target="_blank"
+          rel="noopener"
+          class="btn-cta"
+          onclick="window.open(this.href,'_blank'); return false;"
+          aria-label="Abrir conversa no WhatsApp com a Terapeuta Lorena Jacob"
+        >
+          Saiba mais agora mesmo
+        </a>
       </div>
     </section>
 
-    <section id="formulario" class="form-section">
+    <!-- FORMULÁRIO -->
+    <section id="formulario" class="form-section" aria-label="Formulário de agendamento">
       <div class="form-container">
         <h2>Agende sua consultoria gratuita</h2>
         <p>Preencha o formulário abaixo e escolha sua modalidade preferida:</p>
 
-        <form class="contact-form" action="#" method="POST">
-          <input type="text" name="nome" placeholder="Seu nome" required />
-          <input type="email" name="email" placeholder="Seu e-mail" required />
-          <input type="tel" name="telefone" placeholder="Seu telefone" />
+        <form class="contact-form" action="#" method="POST" novalidate>
+          <input type="text" name="nome" placeholder="Seu nome" required aria-label="Seu nome" />
+          <input type="email" name="email" placeholder="Seu e-mail" required aria-label="Seu e-mail" />
+          <input type="tel" name="telefone" placeholder="Seu telefone" aria-label="Seu telefone" />
 
-          <select name="modalidade" required>
+          <select name="modalidade" required aria-label="Escolha a modalidade">
             <option value="">Escolha uma opção</option>
             <option value="online">Consultoria Online</option>
             <option value="presencial">Consultoria Presencial</option>
@@ -61,11 +83,7 @@
         </form>
       </div>
     </section>
-  </main>
-</body>
 
-    
-    <script src="scripts.js"></script>
-</html>
+  </main>
 </body>
 </html>
